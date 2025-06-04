@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cyberpunk Neon</title>
+    <style>
+        @keyframes bounce-in {
+            0% { transform: scale(0.8); opacity: 0; }
+            60% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        .animate-bounce-in {
+            animation: bounce-in 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes slide-in {
+            0% { transform: translateY(40px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slide-in {
+            animation: slide-in 1s ease;
+        }
+        .neon-text {
+            color: #39ff14;
+            text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14, 0 0 32px #39ff14;
+        }
+        .neon-btn {
+            box-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+            border: 2px solid #39ff14;
+            background: transparent;
+        }
+        .neon-btn:hover {
+            background: #39ff14;
+            color: #111;
+            box-shadow: 0 0 24px #39ff14, 0 0 48px #39ff14;
+            border-color: #39ff14;
+        }
+        .neon-border {
+            box-shadow: 0 0 24px #39ff14, 0 0 48px #39ff14 inset;
+            border: 2px solid #39ff14;
+        }
+        body {
+            background: linear-gradient(135deg, #111 60%, #222 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+    <div class="container mx-auto max-w-lg p-8 bg-black neon-border rounded-3xl shadow-2xl animate-bounce-in">
+        <h1 class="text-center text-4xl font-extrabold mb-6 neon-text animate-slide-in">¡Bienvenido Cyberpunk!</h1>
+        <p class="text-center text-lg mb-8 text-gray-300 animate-slide-in">el pepe <span class="neon-text">neón</span> estilo cyberpunk.</p>
+        <div class="flex justify-center gap-6">
+            <button class="px-8 py-3 neon-btn neon-text font-bold rounded-full shadow-lg transform transition hover:scale-110 animate-slide-in">
+                Hackear
+            </button>
+            <button class="px-8 py-3 neon-btn neon-text font-bold rounded-full shadow-lg transform transition hover:scale-110 animate-slide-in">
+                Infiltrar
+            </button>
+        </div>
+        <div class="mt-10 flex justify-center">
+            <svg class="w-20 h-20 neon-text animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" stroke="#39ff14" stroke-width="2" fill="none"/>
+                <path stroke="#39ff14" stroke-width="2" d="M12 8v4l3 3"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
+
